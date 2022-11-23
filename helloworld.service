@@ -2,10 +2,10 @@
 Description=Gunicorn instance for a simple hello world app
 After=network.target
 [Service]
-User=ec2-user
+User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ec2-user/helloworld
-ExecStart=/home/ec2-user/helloworld/venv/bin/gunicorn -b localhost:8000 app:app
+WorkingDirectory=/home/ubuntu/helloworld
+ExecStart=/home/ubuntu/helloworld/venv/bin/gunicorn -b localhost:8000 app:app
 Restart=always
 [Install]
 WantedBy=multi-user.target
